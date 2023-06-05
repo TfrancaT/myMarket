@@ -2,8 +2,14 @@
 #include <stdlib.h>
 #include <string.h>
 
+typedef struct {
+	int codProd;
+	float precoProd;
+	char tipoProd[30];
+}produto;
+
 int main(){
-	int endCode, opcaoFunction;
+	int opcaoFunction;
 	
 	do{
 		
@@ -18,6 +24,8 @@ int main(){
 		printf("\nSelecione a opcao desejada: ");
 		scanf("%d", &opcaoFunction);
 		
+		system("cls");
+		
 		switch(opcaoFunction){
 			case 1:
 				printf("\nVOCE SELECIONOU VISUALIZAR ESTOQUE;\n");
@@ -28,6 +36,5 @@ int main(){
 			case 3:
 				printf("\nVOCE SELECIONOU VENDAS;\n");
 		}
-		
 	}while(opcaoFunction != 0);
 }
