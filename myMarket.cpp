@@ -8,7 +8,7 @@ int main(){
 	do{
 		
 		printf("_____________");
-		printf("myMarkey");
+		printf("myMarket");
 		printf("______________");
 		printf("\n1- VISUALIZAR ESTOQUE:");
 		printf("\n2- ADICIONAR/REMOVER PRODUTO:");
