@@ -2,14 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef struct {
-	int codProd;
-	float precoProd;
-	char tipoProd[30];
-}produto;
-
 int main(){
 	int opcaoFunction;
+	
+	
 	
 	do{
 		
