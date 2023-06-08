@@ -2,15 +2,18 @@
 #include <stdlib.h>
 #include <string.h>
 
-int main(){
-	int opcaoFunction;
-	
+typedef struct {
 	char nomeProd[50];
-	int i, codigoProd, quantProd;
-	float precoProd;
+	int codigoProd[50], quantProd[50];
+	float precoProd[50];
+} Produtos;
+
+int main(){
 	
-	int maisProd;
+	int i, maisProd, opcaoFunction;
 	char voltarMenu[30];
+	
+	Produtos meusProdutos;
 	
 	do{
 		
@@ -25,36 +28,37 @@ int main(){
 		printf("\nSELECIONE A OPCAO DESEJADA: \n");
 		scanf("%d", &opcaoFunction);
 		
-		system("cls");
-		
 		switch(opcaoFunction){
+			//OPÇÃO PARA VISUALIZAR ITENS CADASTRADOS EM ESTOQUE;
 			case 1:
 				do{
 				printf("\nVOCE SELECIONOU VISUALIZAR ESTOQUE;\n");				
-				printf("\nPRODUTO: %s\n", nomeProd);
-				printf("\nCODIGO DO PRODUTO: %d\n", codigoProd);
-				printf("\nPRECO: %.2f\n", precoProd);
-				printf("\nQUANTIDADE: %d\n", quantProd);
+				printf("\nPRODUTO: %s\n", meusProdutos.nomeProd[i]);
+				printf("\nCODIGO DO PRODUTO: %d\n", meusProdutos.codigoProd[i]);
+				printf("\nPRECO: %.2f\n", meusProdutos.precoProd[i]);
+				printf("\nQUANTIDADE: %d\n", meusProdutos.quantProd[i]);
 				printf("\nDIGITE SAIR PARA VOLTAR AO MENU PRINCIPAL: \n");
 				scanf("%s", &voltarMenu);
-				}while(voltarMenu == "Sair" || voltarMenu == "SAIR");
+				}while(voltarMenu == "sair" || voltarMenu == "SAIR");
 				break;
 				
+			//OPÇÃO PARA ADICIONAR PRODUTOS EM ESTOQUE;	
 			case 2:
 				printf("\nVOCE SELECIONOU ADICIONAR/REMOVER PRODUTO;\n");
 				
 				do{
-				printf("\nDIGITE NOME DO PRODUTO: ");
-				scanf("%s", &nomeProd);
-				printf("\nCODIGO DO PRODUTO: ");
-				scanf("%d", &codigoProd);
-				printf("\nPRECO DO PRODUTO: ");
-				scanf("%f", &precoProd);
-				printf("\nQUANTIDADE DO PRODUTO: ");
-				scanf("%d", &quantProd);
+					printf("\nDIGITE NOME DO PRODUTO: ");
+					scanf("%s", &meusProdutos.nomeProd[i]);
+					printf("\nCODIGO DO PRODUTO: ");
+					scanf("%d", &meusProdutos.codigoProd);
+					printf("\nPRECO DO PRODUTO: ");
+					scanf("%f", &meusProdutos.precoProd[i]);
+					printf("\nQUANTIDADE DO PRODUTO: ");
+					scanf("%d", &meusProdutos.quantProd[i]);
 				
 				printf("\nDESEJA CADASTRAR MAIS PRODUTOS? \n");
-				printf("\n1- SIM \n 2- NAO ");
+				printf("\n1- SIM\n");
+				printf("\n2- NAO\n");
 				scanf("%d", &maisProd);
 				}while(maisProd == 1);			
 				break;
