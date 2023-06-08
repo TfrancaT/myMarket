@@ -10,7 +10,7 @@ typedef struct {
 
 int main(){
 	
-	int i, opcaoFunction;
+	int i, opcaoFunction, vezesMostrar;
 	char voltarMenu[30];
 	char maisProd[30];
 	
@@ -33,13 +33,14 @@ int main(){
 			//OPÇÃO PARA VISUALIZAR ITENS CADASTRADOS EM ESTOQUE;
 			case 1:
 				do{
-				printf("\nVOCE SELECIONOU VISUALIZAR ESTOQUE;\n");				
-				printf("\nPRODUTO: %s\n", meusProdutos.nomeProd[i]);
-				printf("\nCODIGO DO PRODUTO: %d\n", meusProdutos.codigoProd[i]);
-				printf("\nPRECO: %.2f\n", meusProdutos.precoProd[i]);
-				printf("\nQUANTIDADE: %d\n", meusProdutos.quantProd[i]);
-				printf("\nDIGITE SAIR PARA VOLTAR AO MENU PRINCIPAL: \n");
-				scanf("%s", &voltarMenu);
+					printf("\nVOCE SELECIONOU VISUALIZAR ESTOQUE;\n");				
+					printf("\nPRODUTO: %s\n", meusProdutos.nomeProd[i]);
+					printf("\nCODIGO DO PRODUTO: %d\n", meusProdutos.codigoProd[i]);
+					printf("\nPRECO: %.2f\n", meusProdutos.precoProd[i]);
+					printf("\nQUANTIDADE: %d\n", meusProdutos.quantProd[i]);	
+
+					printf("\nDIGITE SAIR PARA VOLTAR AO MENU PRINCIPAL: \n");
+					scanf("%s", &voltarMenu);
 				}while(voltarMenu == "sair" || voltarMenu == "SAIR");
 				break;
 				
@@ -48,6 +49,8 @@ int main(){
 				printf("\nVOCE SELECIONOU ADICIONAR/REMOVER PRODUTO;\n");
 				
 				do{
+				vezesMostrar++;
+				
 				printf("\nDIGITE NOME DO PRODUTO: ");
 				scanf("%s", &meusProdutos.nomeProd[i]);
 				printf("\nCODIGO DO PRODUTO: ");
