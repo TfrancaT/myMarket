@@ -10,8 +10,9 @@ typedef struct {
 
 int main(){
 	
-	int i, maisProd, opcaoFunction;
+	int i, opcaoFunction;
 	char voltarMenu[30];
+	char maisProd[30];
 	
 	Produtos meusProdutos;
 	
@@ -47,22 +48,22 @@ int main(){
 				printf("\nVOCE SELECIONOU ADICIONAR/REMOVER PRODUTO;\n");
 				
 				do{
-					printf("\nDIGITE NOME DO PRODUTO: ");
-					scanf("%s", &meusProdutos.nomeProd[i]);
-					printf("\nCODIGO DO PRODUTO: ");
-					scanf("%d", &meusProdutos.codigoProd);
-					printf("\nPRECO DO PRODUTO: ");
-					scanf("%f", &meusProdutos.precoProd[i]);
-					printf("\nQUANTIDADE DO PRODUTO: ");
-					scanf("%d", &meusProdutos.quantProd[i]);
-				
+				printf("\nDIGITE NOME DO PRODUTO: ");
+				scanf("%s", &meusProdutos.nomeProd[i]);
+				printf("\nCODIGO DO PRODUTO: ");
+				scanf("%d", &meusProdutos.codigoProd[i]);
+				printf("\nPRECO DO PRODUTO: ");
+				scanf("%f", &meusProdutos.precoProd[i]);
+				printf("\nQUANTIDADE DO PRODUTO: ");
+				scanf("%d", &meusProdutos.quantProd[i]);
 				printf("\nDESEJA CADASTRAR MAIS PRODUTOS? \n");
-				printf("\n1- SIM\n");
-				printf("\n2- NAO\n");
-				scanf("%d", &maisProd);
-				}while(maisProd == 1);			
+				printf("\nSIM\n");
+				printf("\nNAO\n");
+				scanf("%s", &maisProd);
+				}while(maisProd == "SIM" || maisProd == "sim");			
 				break;
 				
+			//OPCAO DE VENDAS, MOSTRAR QUANTIDADE DOS ITENS DISPONIVEIS EM ESTOQUE;
 			case 3:
 				printf("\nVOCE SELECIONOU VENDAS;\n");
 				break;
