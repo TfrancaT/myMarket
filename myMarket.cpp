@@ -6,11 +6,11 @@ typedef struct {
 	char nomeProd[50];
 	int codigoProd[50], quantProd[50];
 	float precoProd[50];
-} Produtos;
+} *Produtos;
 
 int main(){
 	
-	int i, opcaoFunction, vezesMostrar;
+	int opcaoFunction, vezesMostrar;
 	char voltarMenu[30];
 	char maisProd[30];
 	
