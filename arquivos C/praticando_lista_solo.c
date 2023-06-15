@@ -8,16 +8,16 @@ typedef struct node {
 
 int main(){
 
-    struct node *head = malloc(sizeof(struct node));
-    head->data = 1;
-    head->next = NULL;
+struct node *head = malloc(sizeof(struct node));
+head->data = 1;
+head->next = NULL;
 
-    struct node *nohUm = malloc(sizeof(struct node));
-    nohUm->data = 2;
-    nohUm->next = NULL;
-    head->next = nohUm;
+struct node *nohUm = malloc(sizeof(struct node));
+nohUm->data = 2;
+nohUm->next = NULL;
+head->next = nohUm;
 
-    struct node *current = head;
+struct node *current = head;
     while(current != NULL){
         printf("%d\n", current->data);
         current = current->next;
