@@ -34,10 +34,10 @@ int main(){
 			case 1:
 				do{
 					printf("\nVOCE SELECIONOU VISUALIZAR ESTOQUE;\n");				
-					printf("\nPRODUTO: %s\n", meusProdutos.nomeProd[i]);
-					printf("\nCODIGO DO PRODUTO: %d\n", meusProdutos.codigoProd[i]);
-					printf("\nPRECO: %.2f\n", meusProdutos.precoProd[i]);
-					printf("\nQUANTIDADE: %d\n", meusProdutos.quantProd[i]);	
+					printf("\nPRODUTO: %s\n", meusProdutos.nomeProd);
+					printf("\nCODIGO DO PRODUTO: %d\n", meusProdutos.codigoProd);
+					printf("\nPRECO: %.2f\n", meusProdutos.precoProd);
+					printf("\nQUANTIDADE: %d\n", meusProdutos.quantProd);	
 
 					printf("\nDIGITE SAIR PARA VOLTAR AO MENU PRINCIPAL: \n");
 					scanf("%s", &voltarMenu);
@@ -52,13 +52,13 @@ int main(){
 				vezesMostrar++;
 				
 				printf("\nDIGITE NOME DO PRODUTO: ");
-				scanf("%s", &meusProdutos.nomeProd[i]);
+				scanf("%s", &meusProdutos.nomeProd);
 				printf("\nCODIGO DO PRODUTO: ");
-				scanf("%d", &meusProdutos.codigoProd[i]);
+				scanf("%d", &meusProdutos.codigoProd);
 				printf("\nPRECO DO PRODUTO: ");
-				scanf("%f", &meusProdutos.precoProd[i]);
+				scanf("%f", &meusProdutos.precoProd);
 				printf("\nQUANTIDADE DO PRODUTO: ");
-				scanf("%d", &meusProdutos.quantProd[i]);
+				scanf("%d", &meusProdutos.quantProd);
 				printf("\nDESEJA CADASTRAR MAIS PRODUTOS? \n");
 				printf("\nSIM\n");
 				printf("\nNAO\n");
