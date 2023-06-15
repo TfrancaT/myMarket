@@ -6,7 +6,7 @@ typedef struct {
 	char nomeProd[50];
 	int codigoProd[50], quantProd[50];
 	float precoProd[50];
-} *Produtos;
+} Produtos;
 
 int main(){
 	
@@ -30,7 +30,7 @@ int main(){
 		scanf("%d", &opcaoFunction);
 		
 		switch(opcaoFunction){
-			//OPÇÃO PARA VISUALIZAR ITENS CADASTRADOS EM ESTOQUE;
+			//OPï¿½ï¿½O PARA VISUALIZAR ITENS CADASTRADOS EM ESTOQUE;
 			case 1:
 				do{
 					printf("\nVOCE SELECIONOU VISUALIZAR ESTOQUE;\n");				
@@ -44,7 +44,7 @@ int main(){
 				}while(voltarMenu == "sair" || voltarMenu == "SAIR");
 				break;
 				
-			//OPÇÃO PARA ADICIONAR PRODUTOS EM ESTOQUE;	
+			//OPï¿½ï¿½O PARA ADICIONAR PRODUTOS EM ESTOQUE;	
 			case 2:
 				printf("\nVOCE SELECIONOU ADICIONAR/REMOVER PRODUTO;\n");
 				
