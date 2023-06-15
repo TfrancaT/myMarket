@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//Criando um nó
+//Criando um nï¿½
 typedef struct Node {
     int data;
     struct Node* next;
@@ -19,7 +19,7 @@ Stack* createStack() {
     return stack;
 }
 
-//Verifica se a pilha está vazia se re
+//Verifica se a pilha estï¿½ vazia se re
 int isEmpty(Stack* stack) {
     return (stack->top == NULL);
 }
@@ -34,7 +34,7 @@ void push(Stack* stack, int data) {
 int pop(Stack* stack) {
    
     if (isEmpty(stack)) {
-        printf("A pilha está vazia!\n");
+        printf("A pilha estï¿½ vazia!\n");
         return -1;
     }
    

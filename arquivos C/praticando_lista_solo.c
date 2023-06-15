@@ -7,20 +7,23 @@ typedef struct node {
 } node;
 
 int main(){
-    //Estrutura inicial da cabeça do nó;
+
     struct node *head = malloc(sizeof(struct node));
-    head->data = 10;
+    head->data = 1;
     head->next = NULL;
-    
-    struct node *nohDois = malloc(sizeof(struct node));
-    nohDois->data = 20;
-    nohDois->next = NULL;
-    head->next = nohDois;
+
+    struct node *nohUm = malloc(sizeof(struct node));
+    nohUm->data = 2;
+    nohUm->next = NULL;
+    head->next = nohUm;
 
     struct node *current = head;
-    while (current != NULL) {
+    while(current != NULL){
         printf("%d\n", current->data);
         current = current->next;
     }
+        free(head);
+            free(nohUm);
 
+    return 0;
 }
