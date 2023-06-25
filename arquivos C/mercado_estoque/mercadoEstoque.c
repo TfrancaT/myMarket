@@ -38,9 +38,3 @@ void imprimirLista(noList* cabeca){
     }
     printf("\n");
 }
-
-int main(){
-    
-    
-    return 0;
-}
