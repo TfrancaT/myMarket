@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+void signature();
+
 // estrutura do Item/Produto;
 typedef struct {
     int id_item, qt_item;
@@ -218,6 +220,7 @@ venda_item(){
 int main(){
     int opcao_menu;
     Stack* pilha_vendas = createStack();
+        signature();
         do{
             printf("\nBem-vindo ao Seu Estoque.");
             printf("\n--------------------");
@@ -245,4 +248,30 @@ int main(){
         }while(opcao_menu != 0);
 
         return 0;
+}
+
+void signature(){
+printf("               ^!.            ");
+printf("             .P@@#:           ");
+printf("             G@&5BP           ");
+printf("            !@G. :#:          ");
+printf("            J@:  7&:          ");
+printf("            !B  7@B           ");
+printf("            .P!P@@7           ");
+printf("            ~#@@@?            ");
+printf("          ~P@@@G~             ");
+printf("        :5@@@PG:              ");
+printf("       ~&@&Y: 7J              ");
+printf("      ^&@P:  !5&B#GY^         ");
+printf("      Y@P  ^B@#BB5#@@Y        ");
+printf("      J@7  P@J ^P  ?@@!       ");
+printf("      .#5  7@!  P!  G@7       ");
+printf("       ^GY: ^?^ !P ~&P.       ");
+printf("         7YJ7~~~!#557         ");
+printf("           .^~~~^55           ");
+printf("            .    ^B.          ");
+printf("          ?B#B!   B~          ");
+printf("         :@@@@J  .#^          ");
+printf("          !G#?^~7P?           ");
+printf("            :~!!~. ");
 }
