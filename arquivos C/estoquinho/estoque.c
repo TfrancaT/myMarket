@@ -178,9 +178,16 @@ noh_item *cabeca = NULL;
 // funcao para cadastrar o item, esta sendo "consumida" na opcao 2 da condicao 'switch'
 cadastro_item();
 cadastro_item(){
+    int cad_itens;
+    printf("\nQuantos produtos deseja cadastrar? ");
+    scanf("%d", &cad_itens);
+    for(int i = 0; i < cad_itens; i++){
     printf("\n--------------------");
     printf("\nCadastre ID: ");
     scanf("%d", &novo_item.id_item);
+        if(novo_item.id_item == novo_item.id_item){
+            printf("Codigo ja utilizado.");
+        }
     printf("\nNome: ");
     scanf("%s", novo_item.nome_item);
     printf("\nQuantidade: ");
@@ -189,6 +196,7 @@ cadastro_item(){
     scanf("%f", &novo_item.valor_item);
     inserir_noh(&cabeca, novo_item);
     printf("\n--------------------");
+    }
 }
 venda_item();
 venda_item(){
