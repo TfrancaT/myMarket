@@ -185,9 +185,6 @@ cadastro_item(){
     printf("\n--------------------");
     printf("\nCadastre ID: ");
     scanf("%d", &novo_item.id_item);
-        if(novo_item.id_item == novo_item.id_item){
-            printf("Codigo ja utilizado.");
-        }
     printf("\nNome: ");
     scanf("%s", novo_item.nome_item);
     printf("\nQuantidade: ");
