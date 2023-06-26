@@ -4,6 +4,8 @@
 
 void signature();
 
+int *cod_produto, *quantidade;
+
 // estrutura do Item/Produto;
 typedef struct {
     int id_item, qt_item;
@@ -140,16 +142,16 @@ noh_item* buscar_nohs(noh_item* head, int id){
 /*
     funcao para empilhar cada noh que foi utilizado para uma saida/venda;
 */
-void vender_itens(Stack* empilhar_vendas, int id_item, int qte, float preco_venda){
+void vender_itens(Stack* empilhar_vendas, int id_item, int *quantidade, float preco_venda){
     VendaItem venda;
     int cod_venda;
     printf("Informe codigo para Venda: ");
     scanf("%d", &cod_venda);
     venda.id_venda = cod_venda;
     venda.id_item = id_item;
-    venda.qt_venda = qte;
+    venda.qt_venda = *quantidade;
     venda.valor_unidade = preco_venda;
-    venda.valor_venda = preco_venda * qte;
+    venda.valor_venda = preco_venda * *quantidade;
     push(empilhar_vendas, venda);
 }
 
@@ -178,12 +180,9 @@ Item novo_item;
 noh_item *cabeca = NULL;
 
 // funcao para cadastrar o item, esta sendo "consumida" na opcao 2 da condicao 'switch'
-cadastro_item();
+void cadastro_item();
 cadastro_item(){
     int cad_itens;
-    printf("\nQuantos produtos deseja cadastrar? ");
-    scanf("%d", &cad_itens);
-    for(int i = 0; i < cad_itens; i++){
     printf("\n--------------------");
     printf("\nCadastre ID: ");
     scanf("%d", &novo_item.id_item);
@@ -195,7 +194,6 @@ cadastro_item(){
     scanf("%f", &novo_item.valor_item);
     inserir_noh(&cabeca, novo_item);
     printf("\n--------------------");
-    }
 }
 venda_item();
 venda_item(){
@@ -238,7 +236,7 @@ int main(){
                         break;
 
                     case 3:
-                        venda_item();
+                        vender_itens();
                         break;
                     
                     case 4:
